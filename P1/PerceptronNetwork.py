@@ -3,13 +3,10 @@ import PerceptronLayer as pl
 class PerceptronNetwork:
 
     def __init__(self, amountofinput, structure):
-        gate
-        for layer in structure:
-            for gateInteraction in layer:
+        for layer in structure: #loop door alle layers uit de structures
+            for gateInteraction in layer: #waar alle gates in zetten
                 gate = gateInteraction[0]
-                bias = gateInteraction[1]
-                print(gate)
-                print(bias)
+                print(gate) #print ze uit om te testen
 
     # def feed_forward(self, inputs):
 
@@ -28,6 +25,8 @@ XOR = PerceptronNetwork(2, [[["OR"], ["NAND"]], [["AND"]]])
 # print(XOR.activation([0, 1])) #1
 # print(XOR.activation([1, 0])) #1
 # print(XOR.activation([1, 1])) #0
+
+
 
 # print('\nHalf Adder Port')
 # Half_Adder_Port = PerceptronNetwork([0.5, 0.5], 1, [0.5, 0.5], 1, [0.5, 0.5], 1, [0.5, 0.5], 1, [0.5, 0.5], 0, 1)
