@@ -13,9 +13,10 @@ class PerceptronNetwork:
             # print(layer)
 
     def get_layers(self, amountofinput, structure):
-        layers = []
-        layers.append(pL.PerceptronLayer(structure[0][0], structure[0][1]))
-        return layers
+        pass
+        # layers = []
+        # layers.append(pL.PerceptronLayer(structure[0][0], structure[0][1]))
+        # return layers
 
     # def feed_forward(self, inputs):
     #     allposibleinputs = self.give_correct_possibilities(inputs)
