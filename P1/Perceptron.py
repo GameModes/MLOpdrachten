@@ -5,10 +5,10 @@ class Perceptron():
 
     def activation(self):
         """
-        Vraagt alle mogelijkheden voor inputs in een list
-        Zet alle mogelijkheden in een dictionary met als value een lege list die ingevuld kan worden
-        loop door inputs en tel bij elke mogelijke input de totale gewicht van de inputs
-        Dan wordt gecheckt of het met de bias positief is, zo ja dan is het een 1 als output en wordt het
+        - Vraagt alle mogelijkheden voor inputs in een list
+        - Zet alle mogelijkheden in een dictionary met als value een lege list die ingevuld kan worden
+        - Loopt door inputs en tel bij elke mogelijke input de totale gewicht van de inputs
+        - Dan wordt gecheckt of het met de bias positief is, zo ja dan is het een 1 als output en wordt het
         in de lege list van de dictionary toegevoegd
         :return:
         """
@@ -29,7 +29,7 @@ class Perceptron():
 
     def gateUnderstander(self, usedGate, amountofinputs):
         """
-        wordt aangeroepen om een String GateNaam om te zetten in een Perceptron met de getelde aantal inputs als gewichten
+        Wordt aangeroepen om een String GateNaam om te zetten in een Perceptron met de getelde aantal inputs als gewichten
         :param usedGate:
         :param amountofinputs:
         :return:

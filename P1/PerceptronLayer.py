@@ -4,11 +4,11 @@ class PerceptronLayer:
     layer = None
     def __init__(self, gatesInLayer, listOfAmountOfInputs): #vraagt op de gatesindelayer en welk naam ze hebben (misschien moet ik de layer nummer er bij zetten)
         """
-        zet de default perceptron op lege weights en bias
-        loopt door alle gates van de inputs
-        checkt of de gates goed zijn ingevoerd
-        voert elke gate in de gateunderstander van perceptron.py om de perceptron op te vragen en het in een layer toe te voegen
-        de "for x in range(len(layer))" zorgt voor de uitkomsten, bij het gebruik van meerdere gates in een layer, samen in de value
+        -Zet de default perceptron op lege weights en bias
+        -Loopt door alle gates van de inputs
+        -Checkt of de gates goed zijn ingevoerd
+        -Voert elke gate in de gateunderstander van perceptron.py om de perceptron op te vragen en het in een layer toe te voegen
+        -De "for x in range(len(layer))" zorgt voor de uitkomsten, bij het gebruik van meerdere gates in een layer, samen in de value
         dictionary komen om het overzichtelijker te maken voor gebruikers en makkelijker waardes eruit te halen voor de volgende laag
         :rtype: object
         """
