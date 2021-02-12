@@ -18,6 +18,7 @@ class PerceptronLayer:
         for gate in range(len(gatesInLayer)): #
             if gatesInLayer[gate] in ["INVERT", "AND", "OR", "NOR", "NAND"]: #checkt of het wel een goede gate is
                 layer.append(p.gateUnderstander(gatesInLayer[gate], listOfAmountOfInputs[gate])) #zet het in een list genaamd layer
+
             else: #anders stop alles en zeg dat het niet goed is
                 print("Gate or Entire Input wrongly typed")
                 break
@@ -26,21 +27,23 @@ class PerceptronLayer:
                 listsOfGatesinLayer.append(layer[x].activation())
             else:
                 Outputlist = layer[x].activation()
-                print(Outputlist )
                 for key, value in Outputlist.items():
                     listsOfGatesinLayer[0][key].append(value[0])
+        listsOfGatesinLayer = listsOfGatesinLayer[0]
 
 
-        self.listsOfGatesinLayer = listsOfGatesinLayer
+
+
+        self.listsOfGatesinLayer = dict(listsOfGatesinLayer)
         self.layer = layer
 
-    def __str__(self):
-        return str(self.listsOfGatesinLayer) #waarschijnlijk wilde ik hier ene list terug geven van alle gates, maar dat is niet goed gegaan
+    def __dict__(self):
+        return self.listsOfGatesinLayer #waarschijnlijk wilde ik hier ene list terug geven van alle gates, maar dat is niet goed gegaan
 
 # pl = PerceptronLayer(["NAND", "OR", "INVERT"], [2, 2, 1])
 # print(pl)
 
-pl = PerceptronLayer(["OR", "NAND"], [2, 2])
-print(pl)
+# pl = PerceptronLayer(["OR", "NAND"], [2, 2])
+# print(pl)
 
 # print(pl.layer[0].activation([1,1]))

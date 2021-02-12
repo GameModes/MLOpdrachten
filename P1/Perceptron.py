@@ -5,15 +5,15 @@ class Perceptron():
 
     def activation(self):
         """
-        - Vraagt alle mogelijkheden voor inputs in een list
+
         - Zet alle mogelijkheden in een dictionary met als value een lege list die ingevuld kan worden
         - Loopt door inputs en tel bij elke mogelijke input de totale gewicht van de inputs
         - Dan wordt gecheckt of het met de bias positief is, zo ja dan is het een 1 als output en wordt het
         in de lege list van de dictionary toegevoegd
-        :return:
+        :return: Een list met voor alle mogelijkheden de output dat ook in een list zit
         """
         from itertools import product
-        allposibleinputs = [i for i in product(range(2), repeat=len(self.weights))]
+        allposibleinputs = [i for i in product(range(2), repeat=len(self.weights))] #- Vraagt alle mogelijkheden voor inputs in een list
         # Voeg de activatiefunctie toe om uitvoer (output) te leveren bij een gegeven invoer (input).
         possibilityOutputList = {i : [] for i in allposibleinputs} #put all posibilities in a dictionary to save the output
         for possibility in range(len(allposibleinputs)):
@@ -59,13 +59,13 @@ class Perceptron():
         return self.weights, self.bias
 
 
-print('\nAND Port')
-AND_port = Perceptron(weights=[0.5, 0.5], bias=1)
-print(AND_port.activation())
-#
-print('\nInvert Port')
-INVERT_port = Perceptron(weights=[-1], bias=0)
-print(INVERT_port.activation())
+# print('\nAND Port')
+# AND_port = Perceptron(weights=[0.5, 0.5], bias=1)
+# print(AND_port.activation())
+# #
+# print('\nInvert Port')
+# INVERT_port = Perceptron(weights=[-1], bias=0)
+# print(INVERT_port.activation())
 #
 # #
 # print('\nAND Port')
