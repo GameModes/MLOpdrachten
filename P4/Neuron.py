@@ -37,7 +37,13 @@ class Neuron:
 
         return self.netoutput
 
-    def backpropagation(self, a,  inputlist, learningrate):
+    def backpropagation(self, a,  inputlist, learningrate=1):
+        """
+        :param a: the activation number
+        :param inputlist: the input used
+        :param learningrate: amount of change it needs to do. Default is 1
+        :return:
+        """
         newWeightslist = [self.weights[index] - learningrate * inputlist[index] * a for index, x in enumerate(self.weights)]
         newBias = self.bias - learningrate * 1 * a
         self.bias = newBias
