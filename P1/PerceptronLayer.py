@@ -1,10 +1,10 @@
 import Perceptron as per
 
-class PerceptronLayer:
+class PerceptronLayer():
     layer = None
     def __init__(self, gatesInLayer, listOfAmountOfInputs): #vraagt op de gatesindelayer en welk naam ze hebben (misschien moet ik de layer nummer er bij zetten)
         """
-        Vraagt uit de input de string gates op en vraagt in Perceptron.py met de gateunderstander de juiste perceptron.
+        Vraagt uit de input de string gates op en vraagt in LearningPerceptron.py met de gateunderstander de juiste perceptron.
         Daarnaast bij gebruik van meerdere gates in 1 layer, worden de resultaten samen in 1 input gezet (omdat ze toch hetzelfde zijn)
         -Zet de default perceptron op lege weights en bias
         -Loopt door alle gates van de inputs

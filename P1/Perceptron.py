@@ -57,27 +57,27 @@ class Perceptron():
         # string om de weights en bias te printen
         return self.weights, self.bias
 
-
-'''DE PRINT VOOR DE STANDAARD GATES'''
-print('\nInvert Port')
-INVERT_port = Perceptron(weights=[-1], bias=0)
-print(INVERT_port.activation())
-
-print('\nAND Port')
-AND_port = Perceptron(weights=[0.5, 0.5], bias=1)
-print(AND_port.activation())
-
-print('\nOR Port')
-OR_port = Perceptron(weights=[0.5, 0.5], bias=0.5)
-print(OR_port.activation())
-
-
-print('\nNor Port')
-NOR_port = Perceptron(weights=[-0.5, -0.5], bias=0)
-print(NOR_port.activation())
-
-print('\nParty Port')
-Party_port = Perceptron(weights=[0.6, 0.3, 0.2], bias=0.4)
-print(Party_port.activation())
+#
+# '''DE PRINT VOOR DE STANDAARD GATES'''
+# print('\nInvert Port')
+# INVERT_port = Perceptron(weights=[-1], bias=0)
+# print(INVERT_port.activation())
+#
+# print('\nAND Port')
+# AND_port = Perceptron(weights=[0.5, 0.5], bias=1)
+# print(AND_port.activation())
+#
+# print('\nOR Port')
+# OR_port = Perceptron(weights=[0.5, 0.5], bias=0.5)
+# print(OR_port.activation())
+#
+#
+# print('\nNor Port')
+# NOR_port = Perceptron(weights=[-0.5, -0.5], bias=0)
+# print(NOR_port.activation())
+#
+# print('\nParty Port')
+# Party_port = Perceptron(weights=[0.6, 0.3, 0.2], bias=0.4)
+# print(Party_port.activation())
 
 
